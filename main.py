@@ -37,7 +37,6 @@ class MCQQuestion(BaseModel):
 class ShortAnswerQuestion(BaseModel):
     question: str
     expected_answer: str
-    keywords: Optional[List[str]] = None
 
 class FillInTheBlank(BaseModel):
     question: str
@@ -94,8 +93,7 @@ Return your response as a VALID JSON object with this EXACT structure:
   "short_answer": [
     {{
       "question": "Question text?",
-      "expected_answer": "Expected answer in 2-3 sentences",
-      "keywords": ["keyword1", "keyword2"]
+      "expected_answer": "Expected answer in 2-3 sentences"
     }}
   ],
   "fill_in_the_blanks": [
